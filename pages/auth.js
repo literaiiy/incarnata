@@ -3,7 +3,7 @@ import axios from "axios"
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 
 export default function Auth() {
-  const scopes = 'user-top-read user-read-recently-played';
+  const scopes = 'user-top-read user-read-recently-played user-read-currently-playing';
   const cookies = parseCookies();
   const cookie_config = {
     path: '/',

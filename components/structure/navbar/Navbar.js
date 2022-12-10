@@ -10,6 +10,7 @@ const navigation = [
   { name: 'Tracks', href: '/you/tracks' },
   { name: 'Artists', href: '/you/artists' },
   { name: 'Recent', href: '/you/recents' },
+  { name: 'Current', href: '/you/current'}
 ];
 
 function classNames(...classes) {
