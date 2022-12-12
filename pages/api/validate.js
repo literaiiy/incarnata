@@ -1,4 +1,4 @@
-import spotifyAPI from "../../backend/spotifyAPI";
+import spotifyAPI from "./spotifyAPI";
 
 export default async function validateAPI(req, res) {
   let spotify = spotifyAPI(req);
