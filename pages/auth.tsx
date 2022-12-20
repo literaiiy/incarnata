@@ -2,6 +2,11 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { destroyCookie, parseCookies, setCookie } from "nookies";
 
+interface User {
+  name: string;
+  image: string;
+}
+
 export default function Auth() {
   const scopes = 'user-top-read user-read-recently-played user-read-playback-state';
   const cookies = parseCookies();
@@ -11,7 +16,7 @@ export default function Auth() {
   }
 
   const [status, setStatus] = useState("Just a second..");
-  const [user, setUser] = useState();
+  const [user, setUser] = useState<User>();
 
   useEffect(() => {
     if (user) {
@@ -28,7 +33,7 @@ export default function Auth() {
   async function validateToken() {
     await axios.get("/api/validate").then((response) => {
       setUser(response.data);
-      window.location.href = "/you/tracks";
+      window.location.href = "/";
       return true;
     }, () => {
       destroyCookie(null, 'ms-user-code');

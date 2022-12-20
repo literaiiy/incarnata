@@ -22,6 +22,21 @@ body {
   src: url("../lib/Sonder.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Fallind";
+  src: url("../lib/Fallind.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Reey";
+  src: url("../lib/Reey.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Yozakura";
+  src: url("../lib/Yozakura.otf") format("opentype");
+}
+
 img {
   @apply transition-shadow;
 }
